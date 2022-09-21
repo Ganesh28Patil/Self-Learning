@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage | PreClass</title>
+</head>
+
+<body>
+    <h1>Local Storage, JSON, Client-Server Model</h1>
+    <input id="name" type="text" placeholder="Enter Name">
+    <button onclick="addName()">Submit</button>
+</body>
+<script>
+    function addName() {
+        let friend = document.getElementById("name").value;
+        let p = document.createElement('p');
+        p.innerText = friend;
+        document.body.append(p);
+    }
+
+    localStorage.setItem('myName', "GAnesh"); // localStorage.setItem
+    let getName = localStorage.getItem('myName'); // localStorage.getItem
+    console.log(getName);
+    // setItem getItem removeItem clear
+    // localStorage.removeItem('myName');
+    // to clear all data from local Storage we do      // localStorage.clear()
+</script>
+
+</html>
