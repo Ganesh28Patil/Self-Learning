@@ -27,6 +27,48 @@
     // setItem getItem removeItem clear
     // localStorage.removeItem('myName')
     // to clear all data from local Storage we do      // localStorage.clear()
+
+    let arr = [1, 2, 3, 4];
+    console.log('arr:', arr)
+    localStorage.setItem("newArr", arr);
+    let getArr = localStorage.getItem("newArr");
+    console.log('getArr:', getArr);
+    console.log('getArr:', getArr.split(",").map(Number));
+    // simple object
+    let obj = { name: "sachin", city: "Mumbai" };
+    // console.log('obj:', obj)
+    localStorage.setItem("newObj", obj);
+    let getObj = localStorage.getItem("newObj");
+    console.log('getObj:', getObj);
+    // JSON data
+    let jsonObj = {
+        "name": "Rahul",
+        "age": "22",
+    };
+    console.log('jsonObj:', jsonObj);
+
+
+    let person = {
+        name: "Ganesh",
+        age: 30,
+        height: "5.8",
+        Qualification: "BE Computer",
+    }
+    console.log('person:', person)
+
+    let jsonData = JSON.stringify(person);
+    console.log('jsonData:', jsonData);
+    let regularObj = JSON.parse(jsonData);
+    console.log('regularObj:', regularObj);
+
+
+
+
+
+
+
+
+
 </script>
 
 </html>
