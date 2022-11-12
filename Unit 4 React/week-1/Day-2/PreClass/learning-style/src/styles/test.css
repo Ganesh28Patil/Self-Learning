@@ -1,0 +1,19 @@
+.one{
+    color:yellow;
+    background-color: red;
+    font-size: 60px;
+    margin: 10px;
+}
+.two{
+    border-radius: 10px;
+}
+
+.class1{
+    font-size: 120px;
+    background-color: aqua;
+}
+.class2{
+    /* font-size: 20; */
+    /* background: yellow; */
+    color: red;
+}

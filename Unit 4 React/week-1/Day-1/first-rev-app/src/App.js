@@ -12,7 +12,7 @@ function App() {
     { name: "Wahid", place: "kerala" },
     { name: "Hemant", place: "Uttar Pradesh" },
     { name: "Aaron", place: "Goa" },
-    { name: "Sonali", place: "Sangamnair aka South Africa" },
+    { name: "Sonali", place: "Sangamnair aka lagos in South Africa" },
   ];
 
   return (
