@@ -1,0 +1,21 @@
+#Revision
+
+- Algorithm ?
+A: Set of Instruction, executed step by step 
+
+-What is React ?
+A:A JS library use to build UI
+
+- why do we use React ?
+A: simple, fast, declarative,component based, re-usable
+
+
+-What is JSX ?
+A: HTML/XML code in JS code.
+
+- What is Component ?
+A: JS function that return HTML/XML code.
+
+
+- What is Virtual DOM ?
+A:
