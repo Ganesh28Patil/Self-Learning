@@ -4,7 +4,7 @@
 A: Set of Instruction, executed step by step 
 
 -What is React ?
-A:A JS library use to build UI
+A: A JS library use to build UI
 
 - why do we use React ?
 A: simple, fast, declarative,component based, re-usable
@@ -18,4 +18,36 @@ A: JS function that return HTML/XML code.
 
 
 - What is Virtual DOM ?
-A:
+A:  Shallow copy of our actual DOM
+Compare and updates what need to be updated
+
+
+- What is State  ?
+A: Basicaly  State is information about a Component or an Application 
+   which you want DOM to be aware of.
+
+
+- what is string interpolation     ?
+A:  `writing statement in bactick ${varaible} `
+
+- what is HTML interpolation     ?
+A:  As refering froma above  string interpolation,
+    HTML interpolation is done in React for writing HTML code in JS function,
+    so make this happen we make use of { curly bracket }
+
+- what is hooks ?
+A: hooks is the way in which we interact with Virtual DOM
+   hook are mainly starting with 'use' for Eg: useState
+   const [value,setValue] = React.useState(initail_value);
+
+   hooks are set of inbuild React functions that used to interact with VDOM. 
+
+
+ -  What is useState ?
+ A:  useState is hook in React
+     which is used to inform VDOM that which of the changes that need to rendered
+     it returns 2 things in array
+     variable and a function to update that variable.
+
+- What is State ?
+A: State is the peice of information (i.e variable) that changing on DOM
