@@ -1,8 +1,8 @@
 import React from "react";
 
-const Counter = () => {
+const Counter = ({ initialValue }) => {
   //   let count = 0;
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = React.useState(initialValue);
   const [count2, setCount2] = React.useState(0);
   const incrementCount = () => {
     setCount(count + 1);

@@ -51,3 +51,14 @@ A: hooks is the way in which we interact with Virtual DOM
 
 - What is State ?
 A: State is the peice of information (i.e variable) that changing on DOM
+
+- what is Fragment in React ?
+A:  <></>  is same as   <Fragment></Fragment>
+
+- What is rafce in React  ?
+A: It is Emeet Abbrevation for React Component
+   how to use ?   
+   create file with name Todos.JSX
+   then write 'rafce' in blank file and press Enter
+
+- 
