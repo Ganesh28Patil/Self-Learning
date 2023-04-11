@@ -1,35 +1,101 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>JQuery</title>
 	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 </head>
+
 <body>
 	<H1>Select file to upload and convert into base64 string</H1>
 	<hr>
 	<br>
-	<label for="fileUpload">Choose file:</label>
-	<input type="file" id="fileUpload" name="fileUpload" />
+	<!-- <label for="fileUpload">Choose file:</label> -->
+	<!-- <input type="file" id="fileUpload" name="fileUpload" /> -->
 	<br><br>
-	<button id="jsonConvert">Click me to upload file and convert into Base64</button>
+	<!-- <button id="jsonConvert">Click me to upload file and convert into Base64</button> -->
+
+	<hr />
+	<hr />
+
+	<form id="form" action="">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" placeholder="enter name" />
+		<br> <br>
+		<label for="fileUpload">Choose file:</label>
+		<input type="file" id="fileUpload" name="fileUpload" />
+
+		<button onclick="getData(event)">Submit</button>
+	</form>
 </body>
+
 </html>
 <script type="text/javascript">
+	/*
 	const toBase64 = file => new Promise((resolve, reject) => {
-	    const reader = new FileReader();
-	    reader.readAsDataURL(file);
-	    reader.onload = () => resolve(reader.result);
-	    reader.onerror = error => reject(error);
+		const reader = new FileReader();
+		reader.readAsDataURL(file);
+		reader.onload = () => resolve(reader.result);
+		reader.onerror = error => reject(error);
 	});
 
-	$('#jsonConvert').click(function() {
-		const uploadedFile = document.querySelector('#fileUpload').files[0];
+	// $('#jsonConvert').click(function () {
+	// 	const uploadedFile = document.querySelector('#fileUpload').files[0];
+	// 	toBase64(uploadedFile)
+	// 		.then(res => {
+	// 			console.log(res);
+	// 		})
+	// 		.catch(err => {
+	// 			console.log(err);
+	// 		})
+	// });
+	let sol = "";
+	function getbase64Data(uploadedFile) {
 		toBase64(uploadedFile)
-		.then(res => {
-			console.log(res);
-		})
-		.catch(err => {
-			console.log(err);
-		})
+			.then(res => {
+				console.log('res:', res.length, res)
+				sol = res;
+			})
+			.catch(err => {
+				console.log(err);
+			})
+		// return sol;
+	}
+	function getData(e) {
+		e.preventDefault();
+		const name = form.name.value;
+		// let name = document.getElementById('name').value;
+		console.log('name:', name);
+		const uploadedFile = document.querySelector('#fileUpload').files[0];
+		let b64Code = getbase64Data(uploadedFile);
+		console.log("b64Code : ", b64Code)// b64Code.length, b64Code.split(";")[1].length)
+	}
+
+*/
+	// --------------
+
+	var toBase64 = function (file, callBack) {
+		file = file.files[0];
+		var reader = new FileReader();
+		reader.readAsDataURL(file);
+		reader.onload = function () {
+			callBack(file, reader.result);
+		};
+		reader.onerror = function (error) {
+			console.log('Error: ', error);
+		};
+	};
+
+
+	//usage with jquery
+	var fileEl = $('input[type=file]');
+	$(fileEl).on('change', function () {
+		toBase64(this, function (file, base64) {
+			console.log(file);
+			console.log(base64);
+		});
 	});
+
+
+
 </script>
