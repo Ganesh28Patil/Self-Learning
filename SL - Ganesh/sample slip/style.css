@@ -1,27 +1,33 @@
-.header{
+.header {
     text-align: center;
 }
-.title_heading span{
-    border: 1px solid blue;
-    align-items: flex-start;
-}
-.left{
-    border:1px solid red;
+
+
+.left {
+    border: 1px solid red;
     width: 45%;
 }
-.left p{
+
+.left p {
     border: 1px solid blue;
     display: flex;
     justify-content: space-between;
     width: 80%;
     /* margin-left: 10px; */
 }
-.basic_title{
+
+.basic_title {
     font-weight: bold;
 }
-.entry_table1{
+
+.entry_table1 {
     border: 1px solid green;
     display: flex;
     justify-content: space-between;
-    width:50%;
+    width: 50%;
+}
+.table2{
+    display: flex;
+    border: 1px solid blue;
+    justify-content: space-between;
 }
