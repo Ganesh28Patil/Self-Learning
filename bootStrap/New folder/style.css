@@ -1,20 +1,4 @@
 .container{
-    border: 2px solid blue;
-    /* height: 50px; */
-}
-.container-fluid{
-    border: 2px solid green;
-    /* height: 50px; */
-}
-.row{
-    border: 1px solid black;
-    margin: 2px;
-}
-.col{
-    border: 1px solid red;
-}
-
-.container{
     border: 2px solid green;
     /* padding: 2px; */
     /* background-color: greenyellow; */
